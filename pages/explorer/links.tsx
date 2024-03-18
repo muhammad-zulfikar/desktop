@@ -26,7 +26,7 @@ function Links() {
 									30/12/2021 02:02
 								</p>
 								<p className={styles.listItemType}>Shortcut</p>
-								<p className={styles.listItemSize}>2kt</p>
+								<p className={styles.listItemSize}>2kb</p>
 							</div>
 						</a>
 					</Link>
@@ -49,7 +49,7 @@ function Links() {
 									30/01/2022 12:44
 								</p>
 								<p className={styles.listItemType}>Shortcut</p>
-								<p className={styles.listItemSize}>2kt</p>
+								<p className={styles.listItemSize}>2kb</p>
 							</div>
 						</a>
 					</Link>
@@ -69,7 +69,7 @@ function Links() {
 									01/08/2022 08:00
 								</p>
 								<p className={styles.listItemType}>Shortcut</p>
-								<p className={styles.listItemSize}>2kt</p>
+								<p className={styles.listItemSize}>2kb</p>
 							</div>
 						</a>
 					</Link>
@@ -94,7 +94,7 @@ function Links() {
 									01/01/2024 04:20
 								</p>
 								<p className={styles.listItemType}>Shortcut</p>
-								<p className={styles.listItemSize}>2kt</p>
+								<p className={styles.listItemSize}>2kb</p>
 							</div>
 						</a>
 					</Link>
@@ -117,7 +117,7 @@ function Links() {
 									20/12/2021 12:20
 								</p>
 								<p className={styles.listItemType}>Shortcut</p>
-								<p className={styles.listItemSize}>2kt</p>
+								<p className={styles.listItemSize}>2kb</p>
 							</div>
 						</a>
 					</Link>

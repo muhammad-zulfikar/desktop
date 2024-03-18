@@ -44,7 +44,7 @@ function Podcasts({ data }: { data: Props }) {
 									{getDate(data.webbidevausTime)}
 								</p>
 								<p className={styles.listItemType}>Shortcut</p>
-								<p className={styles.listItemSize}>2kt</p>
+								<p className={styles.listItemSize}>2kb</p>
 							</div>
 						</a>
 					</Link>
@@ -65,7 +65,7 @@ function Podcasts({ data }: { data: Props }) {
 									{getDate(data.koodiapinnanallaTime)}
 								</p>
 								<p className={styles.listItemType}>Shortcut</p>
-								<p className={styles.listItemSize}>2kt</p>
+								<p className={styles.listItemSize}>2kb</p>
 							</div>
 						</a>
 					</Link>
@@ -86,7 +86,7 @@ function Podcasts({ data }: { data: Props }) {
 									{getDate(data.koodikrapulaTime)}
 								</p>
 								<p className={styles.listItemType}>Shortcut</p>
-								<p className={styles.listItemSize}>2kt</p>
+								<p className={styles.listItemSize}>2kb</p>
 							</div>
 						</a>
 					</Link>

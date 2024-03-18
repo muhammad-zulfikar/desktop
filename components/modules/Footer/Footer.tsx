@@ -73,6 +73,16 @@ function Footer() {
 							className="windowsIcon"
 						/>
 					</div>
+					<Link href="/terminal" passHref>
+						<div className={styles.icon}>
+							<Image
+								src={'/icons/terminal/terminal.png'}
+								width={25}
+								height={25}
+								alt="logo"
+							/>
+						</div>
+					</Link>
 					<Link href="/explorer/quick-access" passHref>
 						<div className={styles.icon}>
 							<Image
@@ -85,45 +95,12 @@ function Footer() {
 					</Link>
 					<div
 						className={styles.icon}
-						onClick={() => handleError('Firefox')}
+						onClick={() => handleError('Chrome')}
 					>
 						<Image
-							src={'/icons/firefox/firefox.png'}
-							width={25}
-							height={25}
-							alt="logo"
-						/>
-					</div>
-					<div
-						className={styles.icon}
-						onClick={() => handleError('Spotify')}
-					>
-						<Image
-							src={'/icons/spotify/spotify.png'}
-							width={25}
-							height={25}
-							alt="logo"
-						/>
-					</div>
-					<div
-						className={styles.icon}
-						onClick={() => handleError('Steam')}
-					>
-						<Image
-							src={'/icons/steam/steam.png'}
-							width={25}
-							height={25}
-							alt="logo"
-						/>
-					</div>
-					<div
-						className={styles.icon}
-						onClick={() => handleError('Discord')}
-					>
-						<Image
-							src={'/icons/discord/discord.png'}
-							width={25}
-							height={25}
+							src={'/icons/chrome/chrome.png'}
+							width={30}
+							height={30}
 							alt="logo"
 						/>
 					</div>
@@ -140,16 +117,17 @@ function Footer() {
 							alt="logo"
 						/>
 					</div>
-					<Link href="/terminal" passHref>
-						<div className={styles.icon}>
-							<Image
-								src={'/icons/terminal/terminal.png'}
-								width={25}
-								height={25}
-								alt="logo"
-							/>
-						</div>
-					</Link>
+					<div
+						className={styles.icon}
+						onClick={() => handleError('Spotify')}
+					>
+						<Image
+							src={'/icons/spotify/spotify.png'}
+							width={27}
+							height={27}
+							alt="logo"
+						/>
+					</div>
 				</section>
 				<section className={styles.toolbarContainer}>
 					<div className={styles.language}>

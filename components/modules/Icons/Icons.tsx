@@ -54,7 +54,7 @@ function Icons() {
 			/>
 			<div className={`elements ${styles.container}`}>
 				<div className={`selecto-area ${styles.wrapper}`} id="selecto1">
-					<Link href={'/notepad/about'} passHref>
+					{/* <Link href={'/notepad/about'} passHref>
 						<div className={`${styles.item} selectoItem`}>
 							<Image
 								src="/icons/notes/notes.png"
@@ -131,9 +131,9 @@ function Icons() {
 							></Image>
 							<p>Videos</p>
 						</div>
-					</Link>
+					</Link> */}
 
-					<div className={`${styles.item} selectoItem recycleBin`}>
+					{/* <div className={`${styles.item} selectoItem recycleBin`}>
 						{deleted ? (
 							<Image
 								src="/icons/trash/trash_full.png"
@@ -150,7 +150,7 @@ function Icons() {
 							></Image>
 						)}
 						<p>Recycle Bin</p>
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</>

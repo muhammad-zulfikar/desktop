@@ -25,7 +25,7 @@ function Desktop() {
 								30.12.2021 04:02
 							</p>
 							<p className={styles.listItemType}>Text Document</p>
-							<p className={styles.listItemSize}>2kt</p>
+							<p className={styles.listItemSize}>2kb</p>
 						</div>
 					</Link>
 					<Link href="/explorer/projects" passHref>
@@ -43,10 +43,11 @@ function Desktop() {
 								30.12.2021 04:02
 							</p>
 							<p className={styles.listItemType}>Folder</p>
-							<p className={styles.listItemSize}>2kt</p>
+							<p className={styles.listItemSize}>2kb</p>
 						</div>
 					</Link>
-					<Link href="/explorer/tools" passHref>
+					
+					{/* <Link href="/explorer/tools" passHref>
 						<div className={styles.listItem}>
 							<div className={styles.listItemName}>
 								<Image
@@ -61,10 +62,11 @@ function Desktop() {
 								30.12.2021 04:02
 							</p>
 							<p className={styles.listItemType}>Folder</p>
-							<p className={styles.listItemSize}>2kt</p>
+							<p className={styles.listItemSize}>2kb</p>
 						</div>
-					</Link>
-					<Link href="/explorer/podcasts" passHref>
+					</Link> */}
+
+					{/* <Link href="/explorer/podcasts" passHref>
 						<div className={styles.listItem}>
 							<div className={styles.listItemName}>
 								<Image
@@ -79,10 +81,11 @@ function Desktop() {
 								30.01.2021 04:02
 							</p>
 							<p className={styles.listItemType}>Folder</p>
-							<p className={styles.listItemSize}>2kt</p>
+							<p className={styles.listItemSize}>2kb</p>
 						</div>
-					</Link>
-					<Link href="/explorer/links" passHref>
+					</Link> */}
+
+					{/* <Link href="/explorer/links" passHref>
 						<div className={styles.listItem}>
 							<div className={styles.listItemName}>
 								<Image
@@ -97,11 +100,11 @@ function Desktop() {
 								30.12.2021 04:02
 							</p>
 							<p className={styles.listItemType}>Folder</p>
-							<p className={styles.listItemSize}>2kt</p>
+							<p className={styles.listItemSize}>2kb</p>
 						</div>
-					</Link>
+					</Link> */}
 
-					<Link href="/explorer/pictures" passHref>
+					{/* <Link href="/explorer/pictures" passHref>
 						<div className={styles.listItem}>
 							<div className={styles.listItemName}>
 								<Image
@@ -116,7 +119,7 @@ function Desktop() {
 								30.12.2021 04:02
 							</p>
 							<p className={styles.listItemType}>Folder</p>
-							<p className={styles.listItemSize}>2kt</p>
+							<p className={styles.listItemSize}>2kb</p>
 						</div>
 					</Link>
 
@@ -135,9 +138,9 @@ function Desktop() {
 								30.12.2021 04:02
 							</p>
 							<p className={styles.listItemType}>Folder</p>
-							<p className={styles.listItemSize}>2kt</p>
+							<p className={styles.listItemSize}>2kb</p>
 						</div>
-					</Link>
+					</Link> */}
 				</div>
 			</>
 		);

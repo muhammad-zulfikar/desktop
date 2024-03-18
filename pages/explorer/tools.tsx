@@ -23,7 +23,7 @@ function Tools() {
 							30/12/2021 03:32
 						</p>
 						<p className={styles.listItemType}>Shortcut</p>
-						<p className={styles.listItemSize}>2kt</p>
+						<p className={styles.listItemSize}>2kb</p>
 					</div>
 					<div className={styles.listItem}>
 						<div className={styles.listItemName}>
@@ -39,7 +39,7 @@ function Tools() {
 							30/12/2021 05:10
 						</p>
 						<p className={styles.listItemType}>Shortcut</p>
-						<p className={styles.listItemSize}>2kt</p>
+						<p className={styles.listItemSize}>2kb</p>
 					</div>
 					<div className={styles.listItem}>
 						<div className={styles.listItemName}>
@@ -55,7 +55,7 @@ function Tools() {
 							30/12/2021 05:01
 						</p>
 						<p className={styles.listItemType}>Shortcut</p>
-						<p className={styles.listItemSize}>2kt</p>
+						<p className={styles.listItemSize}>2kb</p>
 					</div>
 					<div className={styles.listItem}>
 						<div className={styles.listItemName}>
@@ -71,7 +71,7 @@ function Tools() {
 							30/12/2021 01:35
 						</p>
 						<p className={styles.listItemType}>Shortcut</p>
-						<p className={styles.listItemSize}>2kt</p>
+						<p className={styles.listItemSize}>2kb</p>
 					</div>
 					<div className={styles.listItem}>
 						<div className={styles.listItemName}>
@@ -87,7 +87,7 @@ function Tools() {
 							30/12/2021 02:11
 						</p>
 						<p className={styles.listItemType}>Shortcut</p>
-						<p className={styles.listItemSize}>2kt</p>
+						<p className={styles.listItemSize}>2kb</p>
 					</div>
 					<div className={styles.listItem}>
 						<div className={styles.listItemName}>
@@ -103,7 +103,7 @@ function Tools() {
 							30/12/2021 05:59
 						</p>
 						<p className={styles.listItemType}>Shortcut</p>
-						<p className={styles.listItemSize}>2kt</p>
+						<p className={styles.listItemSize}>2kb</p>
 					</div>
 				</div>
 			</>
