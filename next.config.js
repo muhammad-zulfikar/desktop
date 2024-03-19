@@ -1,11 +1,10 @@
 // next.config.js
 
 module.exports = {
-  reactStrictMode: true,
+  experimental: {images: {unoptimized: false}},basePath: "/desktop",reactStrictMode: true,
   images: {
-    domains: ['res.cloudinary.com'],
+    unoptimized: false,domains: ['res.cloudinary.com'],
     formats: ['image/avif', 'image/webp'],
     imageSizes: [128, 256, 512, 1024, 2048],
   },
   output: 'standalone',
-};
