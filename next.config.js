@@ -1,13 +1,6 @@
 // next.config.js
 
-const repo = 'desktop'
-assetPrefix = `/${repo}/`
-basePath = `/${repo}`
-
 module.exports = {
-  assetPrefix: assetPrefix,
-  basePath: basePath,
-  images: {
-    path: `${basePath}/_next/image`,
-  },
+  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH,
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH
 };
