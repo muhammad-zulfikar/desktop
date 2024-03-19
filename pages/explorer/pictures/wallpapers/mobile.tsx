@@ -57,27 +57,27 @@ function Pictures({ data }: { data: MediaType[] }) {
 	return (
 		<>
 			<Head>
-				<title>Zulfikar - Pictures</title>
+				<title>Zulfikar - Mobile</title>
 				<link
 					rel="canonical"
-					href="https://www.kassq.dev/explorer/pictures"
+					href="https://zulfikar-desktop.web.app/explorer/pictures/wallpapers/mobile"
 				/>
 
 				{/* Description */}
 				<meta
 					name="description"
-					content="Funny memes and pictures from the internet."
+					content="Mobile Wallpapers"
 				/>
 
 				{/* OpenGraph */}
-				<meta property="og:title" content="Zulfikar - Pictures" />
+				<meta property="og:title" content="Zulfikar - Mobile" />
 				<meta
 					property="og:url"
-					content="https://www.kassq.dev/explorer/pictures"
+					content="https://zulfikar-desktop.web.app/explorer/pictures/wallpapers/mobile"
 				/>
 				<meta
 					property="og:description"
-					content="Funny memes and pictures from the internet."
+					content="Mobile Wallpapers"
 				/>
 			</Head>
 			<div style={{ height: '100%' }}>

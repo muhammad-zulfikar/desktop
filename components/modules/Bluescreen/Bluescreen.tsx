@@ -56,10 +56,10 @@ function Bluescreen({ errorCode }: Props) {
 							></Image>
 						</div>
 						<div>
-							{/* <h2>
+							<h2>
 								For more information about this issue and
-								possible fixes, visit https://kassq.dev/error
-							</h2> */}
+								possible fixes, visit https://zulfikar-desktop.web.app/error
+							</h2>
 							<h2>
 								If you call a support person, give them this
 								info: Stop Code: {errorCode || 'UNKNOWN'}

@@ -37,10 +37,10 @@ export default function Document() {
 					content="Average Windows enjoyer"
 				/>
 				<meta property="og:type" content="website" />
-				<meta property="og:url" content="https://www.kassq.dev" />
+				<meta property="og:url" content="https://zulfikar-desktop.web.app" />
 				<meta
 					property="og:image"
-					content="https://www.kassq.dev/logo.webp"
+					content="https://zulfikar-desktop.web.app/favicon.ico"
 				/>
 
 				{/* Global Site Tag (gtag.js) - Google Analytics */}

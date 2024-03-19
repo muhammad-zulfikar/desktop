@@ -165,7 +165,7 @@ function QuickAccess() {
 				<title>Zulfikar - Quick access</title>
 				<link
 					rel="canonical"
-					href="https://www.kassq.dev/explorer/quick-access"
+					href="https://zulfikar-desktop.web.app/explorer/quick-access"
 				/>
 
 				{/* Description */}
@@ -178,7 +178,7 @@ function QuickAccess() {
 				<meta property="og:title" content="Zulfikar - Quick access" />
 				<meta
 					property="og:url"
-					content="https://www.kassq.dev/explorer/quick-access"
+					content="https://zulfikar-desktop.web.app/explorer/quick-access"
 				/>
 				<meta
 					property="og:description"

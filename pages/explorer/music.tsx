@@ -44,7 +44,7 @@ function Music() {
 				<title>Zulfikar - Music</title>
 				<link
 					rel="canonical"
-					href="https://www.kassq.dev/explorer/music"
+					href="https://zulfikar-desktop.web.app/explorer/music"
 				/>
 
 				{/* Description */}
@@ -57,7 +57,7 @@ function Music() {
 				<meta property="og:title" content="Zulfikar - Music" />
 				<meta
 					property="og:url"
-					content="https://www.kassq.dev/explorer/music"
+					content="https://zulfikar-desktop.web.app/explorer/music"
 				/>
 				<meta
 					property="og:description"

@@ -12,8 +12,7 @@ function MediaPlayer(props: Props) {
 	return (
 		<DraggableWindow
 			windowName={'mediaPlayer'}
-			topTitle={`${props.media.filename}.
-            ${props.media.format}`}
+			topTitle={`${props.media.filename}.${props.media.format}`}
 			close={props.closeMedia}
 		>
 			<section className={styles.mediaArea}>{props.component}</section>

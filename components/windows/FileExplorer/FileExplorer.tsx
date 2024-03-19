@@ -97,11 +97,15 @@ function FileExplorer(props: Props) {
 			router.push(history[i]);
 		}
 	};
+	const extractLastFolder = (path: string) => {
+		const folders = path.split('/');
+		return folders[folders.length - 1];
+	};
 
 	return (
 		<DraggableWindow
 			windowName={'fileExplorer'}
-			topTitle={props.folder}
+			topTitle={extractLastFolder(path)}
 			topIcon={
 				<Image
 					src={`/icons/${props.icon}/${props.icon}.png`}

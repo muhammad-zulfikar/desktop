@@ -152,7 +152,7 @@ function Desktop() {
 				<title>Zulfikar - Desktop</title>
 				<link
 					rel="canonical"
-					href="https://www.kassq.dev/explorer/desktop"
+					href="https://zulfikar-desktop.web.app/explorer/desktop"
 				/>
 
 				{/* Description */}
@@ -165,7 +165,7 @@ function Desktop() {
 				<meta property="og:title" content="Zulfikar - Desktop" />
 				<meta
 					property="og:url"
-					content="https://www.kassq.dev/explorer/desktop"
+					content="https://zulfikar-desktop.web.app/explorer/desktop"
 				/>
 				<meta
 					property="og:description"

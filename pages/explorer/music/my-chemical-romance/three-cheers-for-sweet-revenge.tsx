@@ -1,181 +1,174 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/link';
+import { useContext, useState } from 'react';
 import Icons from '../../../../components/modules/Icons/Icons';
+import { handleWindowPriority } from '../../../../components/utils/WindowPriority/WindowPriority';
 import FileExplorer from '../../../../components/windows/FileExplorer/FileExplorer';
-import styles from '../../../../styles/utils/List.module.css';
+import MediaPlayer from '../../../../components/windows/MediaPlayer/MediaPlayer';
+import { Context } from '../../../../context/ContextProvider';
+import styles from '../../../../styles/utils/MediaGrid.module.css';
+import { MediaType } from '../../../../typings';
 
-function Revenge() {
-  const audios = [
-    {
-      type: 'file',
-      name: "01. Helena.flac",
-      icon: '/icons/albums/three_cheers_for_sweet_revenge.png',
-      alt: 'AUDIO',
-      link: 'https://drive.google.com/uc?export=download&id=1bqfCRzvcEw0OY3elVPC8alHTAtuge743',
-      lastModified: "2023-04-21",
-      size: "42M"
-    },
-    {
-      type: 'file',
-      name: "02. Give 'Em Hell, Kid.flac",
-      icon: '/icons/albums/three_cheers_for_sweet_revenge.png',
-      alt: 'AUDIO',
-      link: "https://drive.google.com/uc?export=download&id=17-hQYsfi3s6mLhMLRpU2yGs2AMGYjXeX",
-      lastModified: "2023-04-21",
-      size: "50M"
-    },
-    {
-      type: 'file',
-      name: "03. To the End.flac",
-      icon: '/icons/albums/three_cheers_for_sweet_revenge.png',
-      alt: 'AUDIO',
-      link: "https://drive.google.com/uc?export=download&id=1oMTYEG7bLq5_lF4JnTgnHrR9fnoqZ5wZ",
-      lastModified: "2023-04-21",
-      size: "38M"
-    },
-    {
-      type: 'file',
-      name: "04. You Know What They Do to Guys Like Us in Prison.flac",
-      icon: '/icons/albums/three_cheers_for_sweet_revenge.png',
-      alt: 'AUDIO',
-      link: "https://drive.google.com/uc?export=download&id=1ODb7yEIPa3dpuu-wy8F8HM7nnB-3ZJNf",
-      lastModified: "2023-04-21",
-      size: "36M"
-    },
-    {
-      type: 'file',
-      name: "05. I'm Not Okay (I Promise).flac",
-      icon: '/icons/albums/three_cheers_for_sweet_revenge.png',
-      alt: 'AUDIO',
-      link: "https://drive.google.com/uc?export=download&id=1HkHD7OX2JfaZnR3SpcLjmG3dmi8PaiHc",
-      lastModified: "2023-04-21",
-      size: "39M"
-    },
-    {
-      type: 'file',
-      name: "06. The Ghost of You.flac",
-      icon: '/icons/albums/three_cheers_for_sweet_revenge.png',
-      alt: 'AUDIO',
-      link: "https://drive.google.com/uc?export=download&id=1zj7IkeTFtZR6Nk25zbSXIamWtO2Qs7Nl",
-      lastModified: "2023-04-21",
-      size: "41M"
-    },
-    {
-      type: 'file',
-      name: "07. The Jetset Life Is Gonna Kill You.flac",
-      icon: '/icons/albums/three_cheers_for_sweet_revenge.png',
-      alt: 'AUDIO',
-      link: "https://drive.google.com/uc?export=download&id=1chWw48SOs8ZhjbC6NQbXSMavG544cD_c",
-      lastModified: "2023-04-21",
-      size: "45M"
-    },
-    {
-      type: 'file',
-      name: "08. Interlude.flac",
-      icon: '/icons/albums/three_cheers_for_sweet_revenge.png',
-      alt: 'AUDIO',
-      link: "https://drive.google.com/uc?export=download&id=1dVKyV16-YyWRkqD1g9mBUtyFNJUDtYMd",
-      lastModified: "2023-04-21",
-      size: "9.5M"
-    },
-    {
-      type: 'file',
-      name: "09. Thank You for the Venom.flac",
-      icon: '/icons/albums/three_cheers_for_sweet_revenge.png',
-      alt: 'AUDIO',
-      link: "https://drive.google.com/uc?export=download&id=1_VjYwsPfZnKIX-JGfxjgs8zIHUG93UK6",
-      lastModified: "2023-04-21",
-      size: "46M"
-    },
-    {
-      type: 'file',
-      name: "10. Hang 'Em High.flac",
-      icon: '/icons/albums/three_cheers_for_sweet_revenge.png',
-      alt: 'AUDIO',
-      link: "https://drive.google.com/uc?export=download&id=1sT4hMU2bFLnfChhrVAJ_to4u5DctmmMX",
-      lastModified: "2023-04-21",
-      size: "35M"
-    },
-    {
-      type: 'file',
-      name: "11. It's Not a Fashion Statement, It's a Deathwish.flac",
-      icon: '/icons/albums/three_cheers_for_sweet_revenge.png',
-      alt: 'AUDIO',
-      link: "https://drive.google.com/uc?export=download&id=1wDXNrbxj926pUOml8xMTcWbBAcNx1pS8",
-      lastModified: "2023-04-21",
-      size: "44M"
-    },
-    {
-      type: 'file',
-      name: "12. Cemetery Drive.flac",
-      icon: '/icons/albums/three_cheers_for_sweet_revenge.png',
-      alt: 'AUDIO',
-      link: "https://drive.google.com/uc?export=download&id=1Z_H_BayTzcIK5B9ZTmiaoKwAObpKpb18",
-      lastModified: "2023-04-21",
-      size: "38M"
-    },
-    {
-      type: 'file',
-      name: "13. I Never Told You What I Do for a Living.flac",
-      icon: '/icons/albums/three_cheers_for_sweet_revenge.png',
-      alt: 'AUDIO',
-      link: "https://drive.google.com/uc?export=download&id=1v5rn7J26Dm6hCil3vy-pHDMQ72KnS1Wg",
-      lastModified: "2023-04-21",
-      size: "48M"
-    }
-  ];
+function Videos({ data }: { data: MediaType[] }) {
+	const [openVideo, setOpenVideo] = useState<MediaType | null>(null);
 
-  const content = () => {
-    return (
-      <>
-        <div className={styles.listItemContainer}>
-          {audios.map((audio, index) => (
-            <Link href={audio.link} passHref key={index}>
-              <div className={styles.listItem}>
-                <div className={styles.listItemName}>
-                  <Image
-                    src={audio.icon}
-                    alt={audio.alt}
-                    width={16}
-                    height={16}
-                  />
-                  <p>{audio.name}</p>
-                </div>
-                <p className={styles.listItemDateModified}>
-                  {audio.lastModified}
-                </p>
-                <p className={styles.listItemType}>audio</p>
-                <p className={styles.listItemSize}>{audio.size}</p>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </>
-    );
-  };
+	const DraggableWindowContext = useContext(Context);
+	const [windowState, setWindowState] =
+		DraggableWindowContext.windowPriorityState;
 
-  return (
-    <>
-      <Head>
-        <title>Zulfikar - Three Cheers for Sweet Revenge</title>
-        <link
-          rel="canonical"
-          href="https://www.kassq.dev/explorer/music/three-cheers-for-sweet-revenge"
-        />
-        {/* Other metadata */}
-      </Head>
-      <div style={{ height: '100%' }}>
-        <FileExplorer
-          folder="Three Cheers for Sweet Revenge"
-          topNav={true}
-          icon="music"
-          component={content()}
-        />
-        <Icons />
-      </div>
-    </>
-  );
+	const VideoContent = () => {
+		return (
+			<div className={styles.wrapper}>
+				{data.map((video) => (
+					<div
+						className={`${styles.mediaItem} no_click`}
+						key={video.filename}
+						onClick={async () => {
+							setOpenVideo(video);
+
+							const newWindowState = await handleWindowPriority({
+								windowName: 'mediaPlayer',
+								windowPriority: windowState,
+							});
+							if (!newWindowState) return;
+							setWindowState(newWindowState);
+						}}
+					>
+						<div className={styles.imageWrapper}>
+							<Image
+								className="no_click"
+								src={video.thumbnail}
+								alt="icon"
+								width="100%"
+								height="100%"
+								layout="responsive"
+								objectFit="contain"
+							/>
+						</div>
+						<p className="no_click">
+							{video.filename}.{video.format}
+						</p>
+					</div>
+				))}
+			</div>
+		);
+	};
+
+	return (
+		<>
+			<Head>
+				<title>Zulfikar - Three Cheers for Sweet Revenge</title>
+				<link
+					rel="canonical"
+					href="https://zulfikar-desktop.web.app/explorer/music/my-chemical-romance/three-cheers-for-sweet-revenge"
+				/>
+
+				{/* Description */}
+				<meta
+					name="description"
+					content="Three Cheers for Sweet Revenge"
+				/>
+
+				{/* OpenGraph */}
+				<meta property="og:title" content="Zulfikar - Three Cheers for Sweet Revenge" />
+				<meta
+					property="og:url"
+					content="https://zulfikar-desktop.web.app/explorer/music/my-chemical-romance/three-cheers-for-sweet-revenge"
+				/>
+				<meta
+					property="og:description"
+					content="Three Cheers for Sweet Revenge"
+				/>
+			</Head>
+			<div style={{ height: '100%' }}>
+				{openVideo && (
+					<MediaPlayer
+						closeMedia={setOpenVideo}
+						media={openVideo}
+						component={
+							<video
+								controls
+								autoPlay
+								src={openVideo.secure_url}
+								style={{ width: '100%', height: '100%' }}
+							/>
+						}
+					/>
+				)}
+				<FileExplorer
+					folder="Three Cheers for Sweet Revenge"
+					topNav={false}
+					icon="music"
+					component={<VideoContent />}
+				/>
+				<Icons />
+			</div>
+		</>
+	);
 }
 
-export default Revenge;
+interface CloudinaryImage {
+    asset_id: string;
+    public_id: string;
+    format: string;
+    version: number;
+    resource_type: string;
+    type: string;
+    created_at: string;
+    bytes: number;
+    width: number;
+    height: number;
+    folder: string;
+    url: string;
+    secure_url: string;
+}
+
+export async function getStaticProps() {
+	const res = await fetch(
+		`https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD_NAME}/resources/video?max_results=100`,
+		{
+			headers: {
+				Authorization: `Basic ${Buffer.from(
+					process.env.CLOUDINARY_API_KEY +
+						':' +
+						process.env.CLOUDINARY_API_SECRET
+				).toString('base64')}}`,
+			},
+		}
+	).then((res) => res.json());
+
+	const data = res.resources
+        .filter((image: CloudinaryImage) => image.folder === 'Music/Three Cheers for Sweet Revenge')
+        .map((image: CloudinaryImage) => {
+            return {
+                url: image.secure_url.replace('/upload/', '/upload/q_auto:low/'),
+                secure_url: image.secure_url,
+                thumbnail: (
+                    image.secure_url.split('.').slice(0, -1).join('.') + '.webp'
+                ).replace('/upload/', '/upload/q_auto:low/'),
+                filename: image.public_id.replace('Music/Three Cheers for Sweet Revenge/', ''),
+                format: "flac",
+            };
+        })
+        .sort((a: MediaType, b: MediaType) => {
+            // Extract the numbers from filenames and sort in ascending order
+            const numA = parseInt(a.filename.split('.')[0], 10);
+            const numB = parseInt(b.filename.split('.')[0], 10);
+            return numA - numB;
+        });
+
+	if (!data) {
+		return {
+			notFound: true,
+		};
+	}
+
+	return {
+		props: {
+			data,
+		},
+		revalidate: 10,
+	};
+}
+
+export default Videos;

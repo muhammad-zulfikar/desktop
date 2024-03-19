@@ -1,139 +1,56 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/link';
+import { useContext, useState } from 'react';
 import Icons from '../../../../components/modules/Icons/Icons';
+import { handleWindowPriority } from '../../../../components/utils/WindowPriority/WindowPriority';
 import FileExplorer from '../../../../components/windows/FileExplorer/FileExplorer';
-import styles from '../../../../styles/utils/List.module.css';
+import MediaPlayer from '../../../../components/windows/MediaPlayer/MediaPlayer';
+import { Context } from '../../../../context/ContextProvider';
+import styles from '../../../../styles/utils/MediaGrid.module.css';
+import { MediaType } from '../../../../typings';
 
-function Bullets() {
-	const audios = [
-		{
-            type: 'file',
-            name: "01. Romance.flac",
-            icon: '/icons/albums/i_brought_you_my_bullets,_you_brought_me_your_love.png',
-            alt: 'AUDIO',
-            link: "https://drive.google.com/uc?export=download&id=1eT_BoFffGUmINPmmnoSoZ__wCd59eJU5",
-            lastModified: "2023-12-23",
-            size: "18M"
-          },
-          {
-            type: 'file',
-            name: "02. Honey, This Mirror isn't Big Enough for the Two of Us.flac",
-            icon: '/icons/albums/i_brought_you_my_bullets,_you_brought_me_your_love.png',
-            alt: 'AUDIO',
-            link: "https://drive.google.com/uc?export=download&id=1lxLY8R4vPgRIDqjdTjvR_ovBeENliqAM",
-            lastModified: "2023-12-23",
-            size: "86M"
-          },
-          {
-            type: 'file',
-            name: "03. Vampires Will Never Hurt You.flac",
-            icon: '/icons/albums/i_brought_you_my_bullets,_you_brought_me_your_love.png',
-            alt: 'AUDIO',
-            link: "https://drive.google.com/uc?export=download&id=1OP_XJEN4X9ZIy6LctCoqEHpzTi22BDOM",
-            lastModified: "2023-12-23",
-            size: "120M"
-          },
-          {
-            type: 'file',
-            name: "04. Drowning Lesson.flac",
-            icon: '/icons/albums/i_brought_you_my_bullets,_you_brought_me_your_love.png',
-            alt: 'AUDIO',
-            link: "https://drive.google.com/uc?export=download&id=1xg5oyf1tkJu7yzIR-P1zS6zVfpljEKGD",
-            lastModified: "2023-12-23",
-            size: "96M"
-          },
-          {
-            type: 'file',
-            name: "05. Our Lady of Sorrows.flac",
-            icon: '/icons/albums/i_brought_you_my_bullets,_you_brought_me_your_love.png',
-            alt: 'AUDIO',
-            link: "https://drive.google.com/uc?export=download&id=1JTI_QuNKdj3AQQFWEwkVT9A2xKXfqPRC",
-            lastModified: "2023-12-23",
-            size: "47M"
-          },
-          {
-            type: 'file',
-            name: "06. Headfirst for Halos.flac",
-            icon: '/icons/albums/i_brought_you_my_bullets,_you_brought_me_your_love.png',
-            alt: 'AUDIO',
-            link: "https://drive.google.com/uc?export=download&id=1a_AWiw9hM_vRLzTbZUW1gFV-clM66izl",
-            lastModified: "2023-12-23",
-            size: "78M"
-          },
-          {
-            type: 'file',
-            name: "07. Skylines and Turnstiles.flac",
-            icon: '/icons/albums/i_brought_you_my_bullets,_you_brought_me_your_love.png',
-            alt: 'AUDIO',
-            link: "https://drive.google.com/uc?export=download&id=1ulYau4nYDH0f3Jzz2HbOTxC1u6vEyKFA",
-            lastModified: "2023-12-23",
-            size: "75M"
-          },
-          {
-            type: 'file',
-            name: "08. Early Sunsets Over Monroeville.flac",
-            icon: '/icons/albums/i_brought_you_my_bullets,_you_brought_me_your_love.png',
-            alt: 'AUDIO',
-            link: "https://drive.google.com/uc?export=download&id=1awV-pVCY2nGxUL9y2Eh2qE-ENlW9GDdi",
-            lastModified: "2023-12-23",
-            size: "108M"
-          },
-          {
-            type: 'file',
-            name: "09. This Is the Best Day Ever.flac",
-            icon: '/icons/albums/i_brought_you_my_bullets,_you_brought_me_your_love.png',
-            alt: 'AUDIO',
-            link: "https://drive.google.com/uc?export=download&id=1dgHhW-NdodADI2MYE7NWDuZE0mHPO_97",
-            lastModified: "2023-12-23",
-            size: "50M"
-          },
-          {
-            type: 'file',
-            name: "10. Cubicles.flac",
-            icon: '/icons/albums/i_brought_you_my_bullets,_you_brought_me_your_love.png',
-            alt: 'AUDIO',
-            link: "https://drive.google.com/uc?export=download&id=12plPnrnAh8jW6nVexK9NdgllMjINoccg",
-            lastModified: "2023-12-23",
-            size: "84M"
-          },
-          {
-            type: 'file',
-            name: "11. Demolition Lovers.flac",
-            icon: '/icons/albums/i_brought_you_my_bullets,_you_brought_me_your_love.png',
-            alt: 'AUDIO',
-            link: "https://drive.google.com/uc?export=download&id=1XREz4Qn7kxIVjmsj2LH9N8MG29_-P27S",
-            lastModified: "2023-12-23",
-            size: "129M"
-          }
-        ];
+function Videos({ data }: { data: MediaType[] }) {
+	const [openVideo, setOpenVideo] = useState<MediaType | null>(null);
 
-	const content = () => {
+	const DraggableWindowContext = useContext(Context);
+	const [windowState, setWindowState] =
+		DraggableWindowContext.windowPriorityState;
+
+	const VideoContent = () => {
 		return (
-			<>
-				<div className={styles.listItemContainer}>
-					{audios.map((audio, index) => (
-						<Link href={audio.link} passHref key={index}>
-							<div className={styles.listItem}>
-								<div className={styles.listItemName}>
-									<Image
-										src={audio.icon}
-										alt={audio.alt}
-										width={16}
-										height={16}
-									/>
-									<p>{audio.name}</p>
-								</div>
-								<p className={styles.listItemDateModified}>
-									{audio.lastModified}
-								</p>
-								<p className={styles.listItemType}>audio</p>
-								<p className={styles.listItemSize}>{audio.size}</p>
-							</div>
-						</Link>
-					))}
-				</div>
-			</>
+			<div className={styles.wrapper}>
+				{data.map((video) => (
+					<div
+						className={`${styles.mediaItem} no_click`}
+						key={video.filename}
+						onClick={async () => {
+							setOpenVideo(video);
+
+							const newWindowState = await handleWindowPriority({
+								windowName: 'mediaPlayer',
+								windowPriority: windowState,
+							});
+							if (!newWindowState) return;
+							setWindowState(newWindowState);
+						}}
+					>
+						<div className={styles.imageWrapper}>
+							<Image
+								className="no_click"
+								src={video.thumbnail}
+								alt="icon"
+								width="100%"
+								height="100%"
+								layout="responsive"
+								objectFit="contain"
+							/>
+						</div>
+						<p className="no_click">
+							{video.filename}.{video.format}
+						</p>
+					</div>
+				))}
+			</div>
 		);
 	};
 
@@ -143,16 +60,46 @@ function Bullets() {
 				<title>Zulfikar - I Brought You My Bullets, You Brought Me Your Love</title>
 				<link
 					rel="canonical"
-					href="https://www.kassq.dev/explorer/music/i-brought-you-my-bullets,-you-brought-me-your-love"
+					href="https://zulfikar-desktop.web.app/explorer/music/my-chemical-romance/i-brought-you-my-bullets,-you-brought-me-your-love"
 				/>
-				{/* Other metadata */}
+
+				{/* Description */}
+				<meta
+					name="description"
+					content="I Brought You My Bullets, You Brought Me Your Love"
+				/>
+
+				{/* OpenGraph */}
+				<meta property="og:title" content="Zulfikar - I Brought You My Bullets, You Brought Me Your Love" />
+				<meta
+					property="og:url"
+					content="https://zulfikar-desktop.web.app/explorer/music/my-chemical-romance/i-brought-you-my-bullets,-you-brought-me-your-love"
+				/>
+				<meta
+					property="og:description"
+					content="I Brought You My Bullets, You Brought Me Your Love"
+				/>
 			</Head>
 			<div style={{ height: '100%' }}>
+				{openVideo && (
+					<MediaPlayer
+						closeMedia={setOpenVideo}
+						media={openVideo}
+						component={
+							<video
+								controls
+								autoPlay
+								src={openVideo.secure_url}
+								style={{ width: '100%', height: '100%' }}
+							/>
+						}
+					/>
+				)}
 				<FileExplorer
 					folder="I Brought You My Bullets, You Brought Me Your Love"
-					topNav={true}
+					topNav={false}
 					icon="music"
-					component={content()}
+					component={<VideoContent />}
 				/>
 				<Icons />
 			</div>
@@ -160,4 +107,68 @@ function Bullets() {
 	);
 }
 
-export default Bullets;
+interface CloudinaryImage {
+    asset_id: string;
+    public_id: string;
+    format: string;
+    version: number;
+    resource_type: string;
+    type: string;
+    created_at: string;
+    bytes: number;
+    width: number;
+    height: number;
+    folder: string;
+    url: string;
+    secure_url: string;
+}
+
+export async function getStaticProps() {
+	const res = await fetch(
+		`https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD_NAME}/resources/video?max_results=100`,
+		{
+			headers: {
+				Authorization: `Basic ${Buffer.from(
+					process.env.CLOUDINARY_API_KEY +
+						':' +
+						process.env.CLOUDINARY_API_SECRET
+				).toString('base64')}}`,
+			},
+		}
+	).then((res) => res.json());
+
+	const data = res.resources
+        .filter((image: CloudinaryImage) => image.folder === 'Music/I Brought You My Bullets, You Brought Me Your Love')
+        .map((image: CloudinaryImage) => {
+            return {
+                url: image.secure_url.replace('/upload/', '/upload/q_auto:low/'),
+                secure_url: image.secure_url,
+                thumbnail: (
+                    image.secure_url.split('.').slice(0, -1).join('.') + '.webp'
+                ).replace('/upload/', '/upload/q_auto:low/'),
+                filename: image.public_id.replace('Music/I Brought You My Bullets, You Brought Me Your Love/', ''),
+                format: "flac",
+            };
+        })
+        .sort((a: MediaType, b: MediaType) => {
+            // Extract the numbers from filenames and sort in ascending order
+            const numA = parseInt(a.filename.split('.')[0], 10);
+            const numB = parseInt(b.filename.split('.')[0], 10);
+            return numA - numB;
+        });
+
+	if (!data) {
+		return {
+			notFound: true,
+		};
+	}
+
+	return {
+		props: {
+			data,
+		},
+		revalidate: 10,
+	};
+}
+
+export default Videos;

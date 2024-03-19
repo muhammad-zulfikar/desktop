@@ -46,7 +46,7 @@ function MyChemicalRomance() {
 				<title>Zulfikar - My Chemical Romance</title>
 				<link
 					rel="canonical"
-					href="https://www.kassq.dev/explorer/music/MyChemicalRomance"
+					href="https://zulfikar-desktop.web.app/explorer/music/my-chemical-romance"
 				/>
 
 				{/* Description */}
@@ -59,7 +59,7 @@ function MyChemicalRomance() {
 				<meta property="og:title" content="Zulfikar - My Chemical Romance" />
 				<meta
 					property="og:url"
-					content="https://www.kassq.dev/explorer/music/MyChemicalRomance"
+					content="https://zulfikar-desktop.web.app/explorer/music/my-chemical-romance"
 				/>
 				<meta
 					property="og:description"

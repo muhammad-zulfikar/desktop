@@ -25,4 +25,5 @@ export type ProjectType = {
 	name: string;
 	updated_at: string;
 	size: number;
+	topics: string[];
 };

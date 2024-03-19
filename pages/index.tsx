@@ -6,7 +6,7 @@ export default function Home() {
 		<>
 			<Head>
 				<title>Zulfikar</title>
-				<link rel="canonical" href="https://www.kassq.dev" />
+				<link rel="canonical" href="https://zulfikar-desktop.web.app" />
 
 				{/* Description */}
 				<meta
@@ -16,7 +16,7 @@ export default function Home() {
 
 				{/* OpenGraph */}
 				<meta property="og:title" content="Zulfikar" />
-				<meta property="og:url" content="https://www.kassq.dev" />
+				<meta property="og:url" content="https://zulfikar-desktop.web.app" />
 				<meta
 					property="og:description"
 					content="Zulfikar's personal website."

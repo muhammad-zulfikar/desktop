@@ -9,7 +9,7 @@ function Downloads() {
 				<title>Zulfikar - Downloads</title>
 				<link
 					rel="canonical"
-					href="https://www.kassq.dev/explorer/downloads"
+					href="https://zulfikar-desktop.web.app/explorer/downloads"
 				/>
 
 				{/* Description */}
@@ -22,7 +22,7 @@ function Downloads() {
 				<meta property="og:title" content="Zulfikar - Downloads" />
 				<meta
 					property="og:url"
-					content="https://www.kassq.dev/explorer/downloads"
+					content="https://zulfikar-desktop.web.app/explorer/downloads"
 				/>
 				<meta
 					property="og:description"

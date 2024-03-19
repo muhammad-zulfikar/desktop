@@ -3,7 +3,7 @@ import Icons from '../../components/modules/Icons/Icons';
 import Notepad from '../../components/windows/Notepad/Notepad';
 function About() {
 	const getAge = () => {
-		const dateString = '2002-01-30';
+		const dateString = '2003-08-30';
 		var today = new Date();
 		var birthDate = new Date(dateString);
 		var age = today.getFullYear() - birthDate.getFullYear();
@@ -14,7 +14,7 @@ function About() {
 		return age;
 	};
 	const textContent = () => {
-		return `Hello, my name is Kasperi! 👋\n\nI am a ${getAge()}-year-old Computer Science student from Tampere, Finland. I am interested on all kinds of tech related topics such as web development! Open the Links folder to follow me on social media! 🤠\n\nBtw this website is built with Next.js and React and is recreation of my windows desktop :D\n\nMessy source code available on GitHub: https://github.com/KasperiP/windows11-portfolio
+		return `Hello, my name is Zulfikar! 👋\n\nI am a ${getAge()}-year-old International Relations student from Indonesia. I am interested on data analytics and all kinds of tech related topics such as web development! Open the Links folder to follow me on social media! 🤠\n\nBtw this website is built with Next.js and React and is recreation of my windows desktop :D\n\nMessy source code available on GitHub: https://github.com/muhammad-zulfikar/desktop
 		`;
 	};
 
@@ -24,7 +24,7 @@ function About() {
 				<title>Zulfikar - About me</title>
 				<link
 					rel="canonical"
-					href="https://www.kassq.dev/notepad/about"
+					href="https://zulfikar-desktop.web.app/notepad/about"
 				/>
 
 				{/* Description */}
@@ -37,7 +37,7 @@ function About() {
 				<meta property="og:title" content="Zulfikar - About me" />
 				<meta
 					property="og:url"
-					content="https://www.kassq.dev/notepad/about"
+					content="https://zulfikar-desktop.web.app/notepad/about"
 				/>
 				<meta
 					property="og:description"

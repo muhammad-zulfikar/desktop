@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import Icons from '../../components/modules/Icons/Icons';
-import FileExplorer from '../../components/windows/FileExplorer/FileExplorer';
-import styles from '../../styles/utils/List.module.css';
-import { ProjectType } from '../../typings';
+import Icons from '../../../components/modules/Icons/Icons';
+import FileExplorer from '../../../components/windows/FileExplorer/FileExplorer';
+import styles from '../../../styles/utils/List.module.css';
+import { ProjectType } from '../../../typings';
 
 function Projects({ data }: { data: ProjectType[] }) {
 	const content = () => {
@@ -68,7 +68,7 @@ function Projects({ data }: { data: ProjectType[] }) {
 				<title>Zulfikar - Projects</title>
 				<link
 					rel="canonical"
-					href="https://www.kassq.dev/explorer/projects"
+					href="https://zulfikar-desktop.web.app/explorer/documents/projects"
 				/>
 
 				{/* Description */}
@@ -81,7 +81,7 @@ function Projects({ data }: { data: ProjectType[] }) {
 				<meta property="og:title" content="Zulfikar - Quick access" />
 				<meta
 					property="og:url"
-					content="https://www.kassq.dev/explorer/projects"
+					content="https://zulfikar-desktop.web.app/explorer/documents/projects"
 				/>
 				<meta
 					property="og:description"

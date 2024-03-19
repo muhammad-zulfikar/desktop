@@ -131,7 +131,7 @@ function Links() {
 				<title>Zulfikar - Links</title>
 				<link
 					rel="canonical"
-					href="https://www.kassq.dev/explorer/links"
+					href="https://zulfikar-desktop.web.app/explorer/links"
 				/>
 
 				{/* Description */}
@@ -144,7 +144,7 @@ function Links() {
 				<meta property="og:title" content="Zulfikar - Links" />
 				<meta
 					property="og:url"
-					content="https://www.kassq.dev/explorer/links"
+					content="https://zulfikar-desktop.web.app/explorer/links"
 				/>
 				<meta
 					property="og:description"

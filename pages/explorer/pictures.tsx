@@ -44,7 +44,7 @@ function Pictures() {
 				<title>Zulfikar - Pictures</title>
 				<link
 					rel="canonical"
-					href="https://www.kassq.dev/explorer/music/MyChemicalRomance"
+					href="https://zulfikar-desktop.web.app/explorer/pictures"
 				/>
 
 				{/* Description */}
@@ -57,7 +57,7 @@ function Pictures() {
 				<meta property="og:title" content="Zulfikar - Pictures" />
 				<meta
 					property="og:url"
-					content="https://www.kassq.dev/explorer/music/MyChemicalRomance"
+					content="https://zulfikar-desktop.web.app/explorer/pictures"
 				/>
 				<meta
 					property="og:description"

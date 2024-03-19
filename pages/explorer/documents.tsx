@@ -28,7 +28,7 @@ function Documents() {
 							<p className={styles.listItemSize}>2kb</p>
 						</div>
 					</Link>
-					<Link href="/explorer/projects" passHref>
+					<Link href="/explorer/documents/projects" passHref>
 						<div className={styles.listItem}>
 							<div className={styles.listItemName}>
 								<Image
@@ -57,7 +57,7 @@ function Documents() {
 				<title>Zulfikar - Documents</title>
 				<link
 					rel="canonical"
-					href="https://www.kassq.dev/explorer/documents"
+					href="https://zulfikar-desktop.web.app/explorer/documents"
 				/>
 
 				{/* Description */}
@@ -70,7 +70,7 @@ function Documents() {
 				<meta property="og:title" content="Zulfikar - Documents" />
 				<meta
 					property="og:url"
-					content="https://www.kassq.dev/explorer/documents"
+					content="https://zulfikar-desktop.web.app/explorer/documents"
 				/>
 				<meta
 					property="og:description"

@@ -115,7 +115,7 @@ function Tools() {
 				<title>Zulfikar - Tools</title>
 				<link
 					rel="canonical"
-					href="https://www.kassq.dev/explorer/tools"
+					href="https://zulfikar-desktop.web.app/explorer/tools"
 				/>
 
 				{/* Description */}
@@ -128,7 +128,7 @@ function Tools() {
 				<meta property="og:title" content="Zulfikar - Tools" />
 				<meta
 					property="og:url"
-					content="https://www.kassq.dev/explorer/tools"
+					content="https://zulfikar-desktop.web.app/explorer/tools"
 				/>
 				<meta
 					property="og:description"

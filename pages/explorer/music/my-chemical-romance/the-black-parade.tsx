@@ -60,24 +60,24 @@ function Videos({ data }: { data: MediaType[] }) {
 				<title>Zulfikar - The Black Parade</title>
 				<link
 					rel="canonical"
-					href="https://www.kassq.dev/explorer/videos"
+					href="https://zulfikar-desktop.web.app/explorer/music/my-chemical-romance/the-black-parade"
 				/>
 
 				{/* Description */}
 				<meta
 					name="description"
-					content="Here you can find funny dog and cat videos I randomly post sometimes. Maybe horses too."
+					content="The Black Parade"
 				/>
 
 				{/* OpenGraph */}
 				<meta property="og:title" content="Zulfikar - Videos" />
 				<meta
 					property="og:url"
-					content="https://www.kassq.dev/explorer/videos"
+					content="https://zulfikar-desktop.web.app/explorer/music/my-chemical-romance/the-black-parade"
 				/>
 				<meta
 					property="og:description"
-					content="Here you can find funny dog and cat videos I randomly post sometimes. Maybe horses too."
+					content="The Black Parade"
 				/>
 			</Head>
 			<div style={{ height: '100%' }}>

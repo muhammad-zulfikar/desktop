@@ -45,29 +45,29 @@ function Wallpapers() {
 				<title>Zulfikar - Wallpapers</title>
 				<link
 					rel="canonical"
-					href="https://www.kassq.dev/explorer/music/MyChemicalRomance"
+					href="https://zulfikar-desktop.web.app/explorer/pictures/wallpapers"
 				/>
 
 				{/* Description */}
 				<meta
 					name="description"
-					content="Explore the albums of My Chemical Romance."
+					content="Wallpapers"
 				/>
 
 				{/* OpenGraph */}
-				<meta property="og:title" content="Zulfikar - My Chemical Romance" />
+				<meta property="og:title" content="Zulfikar - Wallpapers" />
 				<meta
 					property="og:url"
-					content="https://www.kassq.dev/explorer/music/MyChemicalRomance"
+					content="https://zulfikar-desktop.web.app/explorer/pictures/wallpapers"
 				/>
 				<meta
 					property="og:description"
-					content="Explore the albums of My Chemical Romance."
+					content="Wallpapers"
 				/>
 			</Head>
 			<div style={{ height: '100%' }}>
 				<FileExplorer
-					folder="Wallpapers" 
+					folder="/Pictures/Wallpapers" 
 					topNav={true} 
 					icon="pictures" 
 					component={content()}

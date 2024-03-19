@@ -170,7 +170,7 @@ function Parade() {
                 <title>Zulfikar - The Black Parade</title>
                 <link
                     rel="canonical"
-                    href="https://www.kassq.dev/explorer/music/the-black-parade"
+                    href="https://zulfikar-desktop.web.app/explorer/music/the-black-parade"
                 />
                 {/* Other metadata */}
             </Head>

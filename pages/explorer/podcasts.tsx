@@ -100,7 +100,7 @@ function Podcasts({ data }: { data: Props }) {
 				<title>Zulfikar - Podcasts</title>
 				<link
 					rel="canonical"
-					href="https://www.kassq.dev/explorer/favorites"
+					href="https://zulfikar-desktop.web.app/explorer/favorites"
 				/>
 
 				{/* Description */}
@@ -113,7 +113,7 @@ function Podcasts({ data }: { data: Props }) {
 				<meta property="og:title" content="Zulfikar - Podcasts" />
 				<meta
 					property="og:url"
-					content="https://www.kassq.dev/explorer/podcasts"
+					content="https://zulfikar-desktop.web.app/explorer/podcasts"
 				/>
 				<meta
 					property="og:description"

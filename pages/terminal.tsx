@@ -7,7 +7,7 @@ function Terminal() {
 		<>
 			<Head>
 				<title>Zulfikar - Terminal</title>
-				<link rel="canonical" href="https://www.kassq.dev/terminal" />
+				<link rel="canonical" href="https://zulfikar-desktop.web.app/terminal" />
 
 				{/* Description */}
 				<meta
@@ -19,7 +19,7 @@ function Terminal() {
 				<meta property="og:title" content="Zulfikar - Terminal" />
 				<meta
 					property="og:url"
-					content="https://www.kassq.dev/terminal"
+					content="https://zulfikar-desktop.web.app/terminal"
 				/>
 				<meta
 					property="og:description"

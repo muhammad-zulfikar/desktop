@@ -172,7 +172,7 @@ function ThisPC() {
 				<title>Zulfikar - This PC</title>
 				<link
 					rel="canonical"
-					href="https://www.kassq.dev/explorer/this-pc"
+					href="https://zulfikar-desktop.web.app/explorer/this-pc"
 				/>
 
 				{/* Description */}
@@ -185,7 +185,7 @@ function ThisPC() {
 				<meta property="og:title" content="Zulfikar - This PC" />
 				<meta
 					property="og:url"
-					content="https://www.kassq.dev/explorer/this-pc"
+					content="https://zulfikar-desktop.web.app/explorer/this-pc"
 				/>
 				<meta
 					property="og:description"
