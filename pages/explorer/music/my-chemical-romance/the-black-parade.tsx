@@ -1,190 +1,174 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/link';
+import { useContext, useState } from 'react';
 import Icons from '../../../../components/modules/Icons/Icons';
+import { handleWindowPriority } from '../../../../components/utils/WindowPriority/WindowPriority';
 import FileExplorer from '../../../../components/windows/FileExplorer/FileExplorer';
-import styles from '../../../../styles/utils/List.module.css';
+import MediaPlayer from '../../../../components/windows/MediaPlayer/MediaPlayer';
+import { Context } from '../../../../context/ContextProvider';
+import styles from '../../../../styles/utils/MediaGrid.module.css';
+import { MediaType } from '../../../../typings';
 
-function Parade() {
-    const audios = [
-        {
-            type: 'file',
-            name: "01. The End..flac",
-            icon: '/icons/albums/the_black_parade.png',
-            alt: 'AUDIO',
-            link: "https://drive.google.com/uc?export=download&id=1yjhL_acjXYY1abEjO4hw8hbBkMg08-Qd",
-            lastModified: "2023-04-17",
-            size: "24M"
-        },
-        {
-            type: 'file',
-            name: "02. Dead!..flac",
-            icon: '/icons/albums/the_black_parade.png',
-            alt: 'AUDIO',
-            link: "https://drive.google.com/uc?export=download&id=1rCvDwM_nbJGrLMpWWq37oBY1yW7oJuIk",
-            lastModified: "2023-04-17",
-            size: "42M"
-        },
-        {
-            type: 'file',
-            name: "03. This Is How I Disappear.flac",
-            icon: '/icons/albums/the_black_parade.png',
-            alt: 'AUDIO',
-            link: "https://drive.google.com/uc?export=download&id=1J8HPw8KMmCkpjAuJGXyL4fKM1CSserJj",
-            lastModified: "2023-04-17",
-            size: "50M"
-        },
-        {
-            type: 'file',
-            name: "04. The Sharpest Lives.flac",
-            icon: '/icons/albums/the_black_parade.png',
-            alt: 'AUDIO',
-            link: "https://drive.google.com/uc?export=download&id=19P7NH7UJL01WD0WxXrydsGcg7NZYub5r",
-            lastModified: "2023-04-17",
-            size: "41M"
-        },
-        {
-            type: 'file',
-            name: "05. Welcome to the Black Parade.flac",
-            icon: '/icons/albums/the_black_parade.png',
-            alt: 'AUDIO',
-            link: "https://drive.google.com/uc?export=download&id=1c7ygHgcJd8WBvoX0VdxL8kZiHIHoCh7I",
-            lastModified: "2023-04-17",
-            size: "64M"
-        },
-        {
-            type: 'file',
-            name: "06. I Don't Love You.flac",
-            icon: '/icons/albums/the_black_parade.png',
-            alt: 'AUDIO',
-            link: "https://drive.google.com/uc?export=download&id=1XFykDcFajmMCLu5qJIQj7UEhmPpMiJy9",
-            lastModified: "2023-04-17",
-            size: "48M"
-        },
-        {
-            type: 'file',
-            name: "07. House of Wolves.flac",
-            icon: '/icons/albums/the_black_parade.png',
-            alt: 'AUDIO',
-            link: "https://drive.google.com/uc?export=download&id=1QiBYV9dTUAMCEDiqpWgNoeAgJCzv9AlU",
-            lastModified: "2023-04-17",
-            size: "38M"
-        },
-        {
-            type: 'file',
-            name: "08. Cancer.flac",
-            icon: '/icons/albums/the_black_parade.png',
-            alt: 'AUDIO',
-            link: "https://drive.google.com/uc?export=download&id=12xM6pKl7SCr3vaLtFfRxZle_pNEgsEPZ",
-            lastModified: "2023-04-17",
-            size: "28M"
-        },
-        {
-            type: 'file',
-            name: "09. Mama.flac",
-            icon: '/icons/albums/the_black_parade.png',
-            alt: 'AUDIO',
-            link: "https://drive.google.com/uc?export=download&id=14Fw5lUeO_wmnmc3qN8kdybbuZmJmtEmF",
-            lastModified: "2023-04-17",
-            size: "56M"
-        },
-        {
-            type: 'file',
-            name: "10. Sleep.flac",
-            icon: '/icons/albums/the_black_parade.png',
-            alt: 'AUDIO',
-            link: "https://drive.google.com/uc?export=download&id=1CrOclYK4KunbWmgo37QzDxb-3mi0MdJp",
-            lastModified: "2023-04-17",
-            size: "57M"
-        },
-        {
-            type: 'file',
-            name: "11. Teenagers.flac",
-            icon: '/icons/albums/the_black_parade.png',
-            alt: 'AUDIO',
-            link: "https://drive.google.com/uc?export=download&id=1HPwmKGZHZK4Hvu_vUCN2y8vWtU7kZmhB",
-            lastModified: "2023-04-17",
-            size: "33M"
-        },
-        {
-            type: 'file',
-            name: "12. Disenchanted.flac",
-            icon: '/icons/albums/the_black_parade.png',
-            alt: 'AUDIO',
-            link: "https://drive.google.com/uc?export=download&id=1x6oTsWTGssnoac83xE96WwEvSo61BECZ",
-            lastModified: "2023-04-17",
-            size: "61M"
-        },
-        {
-            type: 'file',
-            name: "13. Famous Last Words.flac",
-            icon: '/icons/albums/the_black_parade.png',
-            alt: 'AUDIO',
-            link: "https://drive.google.com/uc?export=download&id=1NmrWsJKdA65jDxd21zgiw9JvaWxK6Nfq",
-            lastModified: "2023-04-17",
-            size: "62M"
-        },
-        {
-            type: 'file',
-            name: "14. Blood (Hidden Track).flac",
-            icon: '/icons/albums/the_black_parade.png',
-            alt: 'AUDIO',
-            link: "https://drive.google.com/uc?export=download&id=1wvM7_lg6Ms8ninKOq-8o3hktu_mRNG4Y",
-            lastModified: "2023-04-17",
-            size: "13M"
-        }
-    ];
+function Videos({ data }: { data: MediaType[] }) {
+	const [openVideo, setOpenVideo] = useState<MediaType | null>(null);
 
-    const content = () => {
-        return (
-            <>
-                <div className={styles.listItemContainer}>
-                    {audios.map((audio, index) => (
-                        <Link href={audio.link} passHref key={index}>
-                            <div className={styles.listItem}>
-                                <div className={styles.listItemName}>
-                                    <Image
-                                        src={audio.icon}
-                                        alt={audio.alt}
-                                        width={16}
-                                        height={16}
-                                    />
-                                    <p>{audio.name}</p>
-                                </div>
-                                <p className={styles.listItemDateModified}>
-                                    {audio.lastModified}
-                                </p>
-                                <p className={styles.listItemType}>Audio</p>
-                                <p className={styles.listItemSize}>{audio.size}</p>
-                            </div>
-                        </Link>
-                    ))}
-                </div>
-            </>
-        );
-    };
+	const DraggableWindowContext = useContext(Context);
+	const [windowState, setWindowState] =
+		DraggableWindowContext.windowPriorityState;
 
-    return (
-        <>
-            <Head>
-                <title>Zulfikar - The Black Parade</title>
-                <link
-                    rel="canonical"
-                    href="https://www.kassq.dev/explorer/music/the-black-parade"
-                />
-                {/* Other metadata */}
-            </Head>
-            <div style={{ height: '100%' }}>
-                <FileExplorer
-                    folder="The Black Parade"
-                    topNav={true}
-                    icon="music"
-                    component={content()}
-                />
-                <Icons />
-            </div>
-        </>
-    );
+	const VideoContent = () => {
+		return (
+			<div className={styles.wrapper}>
+				{data.map((video) => (
+					<div
+						className={`${styles.mediaItem} no_click`}
+						key={video.filename}
+						onClick={async () => {
+							setOpenVideo(video);
+
+							const newWindowState = await handleWindowPriority({
+								windowName: 'mediaPlayer',
+								windowPriority: windowState,
+							});
+							if (!newWindowState) return;
+							setWindowState(newWindowState);
+						}}
+					>
+						<div className={styles.imageWrapper}>
+							<Image
+								className="no_click"
+								src={video.thumbnail}
+								alt="icon"
+								width="100%"
+								height="100%"
+								layout="responsive"
+								objectFit="contain"
+							/>
+						</div>
+						<p className="no_click">
+							{video.filename}.{video.format}
+						</p>
+					</div>
+				))}
+			</div>
+		);
+	};
+
+	return (
+		<>
+			<Head>
+				<title>Zulfikar - The Black Parade</title>
+				<link
+					rel="canonical"
+					href="https://www.kassq.dev/explorer/videos"
+				/>
+
+				{/* Description */}
+				<meta
+					name="description"
+					content="Here you can find funny dog and cat videos I randomly post sometimes. Maybe horses too."
+				/>
+
+				{/* OpenGraph */}
+				<meta property="og:title" content="Zulfikar - Videos" />
+				<meta
+					property="og:url"
+					content="https://www.kassq.dev/explorer/videos"
+				/>
+				<meta
+					property="og:description"
+					content="Here you can find funny dog and cat videos I randomly post sometimes. Maybe horses too."
+				/>
+			</Head>
+			<div style={{ height: '100%' }}>
+				{openVideo && (
+					<MediaPlayer
+						closeMedia={setOpenVideo}
+						media={openVideo}
+						component={
+							<video
+								controls
+								autoPlay
+								src={openVideo.secure_url}
+								style={{ width: '100%', height: '100%' }}
+							/>
+						}
+					/>
+				)}
+				<FileExplorer
+					folder="The Black Parade"
+					topNav={false}
+					icon="music"
+					component={<VideoContent />}
+				/>
+				<Icons />
+			</div>
+		</>
+	);
 }
 
-export default Parade;
+interface CloudinaryImage {
+    asset_id: string;
+    public_id: string;
+    format: string;
+    version: number;
+    resource_type: string;
+    type: string;
+    created_at: string;
+    bytes: number;
+    width: number;
+    height: number;
+    folder: string;
+    url: string;
+    secure_url: string;
+}
+
+export async function getStaticProps() {
+	const res = await fetch(
+		`https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD_NAME}/resources/video?max_results=100`,
+		{
+			headers: {
+				Authorization: `Basic ${Buffer.from(
+					process.env.CLOUDINARY_API_KEY +
+						':' +
+						process.env.CLOUDINARY_API_SECRET
+				).toString('base64')}}`,
+			},
+		}
+	).then((res) => res.json());
+
+	const data = res.resources
+        .filter((image: CloudinaryImage) => image.folder === 'Music/The Black Parade')
+        .map((image: CloudinaryImage) => {
+            return {
+                url: image.secure_url.replace('/upload/', '/upload/q_auto:low/'),
+                secure_url: image.secure_url,
+                thumbnail: (
+                    image.secure_url.split('.').slice(0, -1).join('.') + '.webp'
+                ).replace('/upload/', '/upload/q_auto:low/'),
+                filename: image.public_id.replace('Music/The Black Parade/', ''),
+                format: "flac",
+            };
+        })
+        .sort((a: MediaType, b: MediaType) => {
+            // Extract the numbers from filenames and sort in ascending order
+            const numA = parseInt(a.filename.split('.')[0], 10);
+            const numB = parseInt(b.filename.split('.')[0], 10);
+            return numA - numB;
+        });
+
+	if (!data) {
+		return {
+			notFound: true,
+		};
+	}
+
+	return {
+		props: {
+			data,
+		},
+		revalidate: 10,
+	};
+}
+
+export default Videos;
