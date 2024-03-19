@@ -1,21 +1,12 @@
-module.exports = {
-	reactStrictMode: true,
-	images: {
-		domains: ['res.cloudinary.com'],
-		formats: ['image/avif', 'image/webp'],
-		imageSizes: [128, 256, 512, 1024, 2048],
-	},
-};
+// next.config.js
 
 module.exports = {
+  reactStrictMode: true,
   images: {
+    domains: ['res.cloudinary.com'],
+    formats: ['image/avif', 'image/webp'],
+    imageSizes: [128, 256, 512, 1024, 2048],
     unoptimized: true,
   },
+  output: 'standalone',
 };
-
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-	output: 'export',
-};
-
-module.exports = nextConfig;
