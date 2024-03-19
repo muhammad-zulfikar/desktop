@@ -46,7 +46,7 @@ function Videos({ data }: { data: MediaType[] }) {
 							/>
 						</div>
 						<p className="no_click">
-							{video.filename.slice(0, -7)}.{video.format}
+							{video.filename}.{video.format}
 						</p>
 					</div>
 				))}
@@ -126,10 +126,7 @@ export async function getStaticProps() {
 			thumbnail: (
 				video.secure_url.split('.').slice(0, -1).join('.') + '.webp'
 			).replace('/upload/', '/upload/q_auto:low/'),
-			filename:
-				video.public_id.replace('videos/', '').length > 25
-					? video.public_id.replace('videos/', '').slice(0, 25)
-					: video.public_id.replace('videos/', ''),
+			filename: video.public_id.replace('videos/', ''),
 			secure_url: video.secure_url,
 			format: video.format,
 		};
