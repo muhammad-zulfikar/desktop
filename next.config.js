@@ -9,4 +9,5 @@ module.exports = {
     unoptimized: true,
   },
   output: 'standalone',
+  basePath: '/desktop',
 };
