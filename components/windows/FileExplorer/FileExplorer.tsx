@@ -108,7 +108,7 @@ function FileExplorer(props: Props) {
 			topTitle={extractLastFolder(path)}
 			topIcon={
 				<Image
-					src={`/icons/${props.icon}/${props.icon}.png`}
+					src={`/desktop/icons/${props.icon}/${props.icon}.png`}
 					alt="ico"
 					width={20}
 					height={20}
@@ -315,7 +315,7 @@ function FileExplorer(props: Props) {
 				<div className={styles.navigatePath}>
 					<div className={styles.left}>
 						<Image
-							src={`/icons/${props.icon}/${props.icon}.png`}
+							src={`/desktop/icons/${props.icon}/${props.icon}.png`}
 							alt="ico"
 							width={20}
 							height={20}

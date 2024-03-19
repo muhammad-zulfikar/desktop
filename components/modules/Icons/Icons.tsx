@@ -57,7 +57,7 @@ function Icons() {
 					{/* <Link href={'/notepad/about'} passHref>
 						<div className={`${styles.item} selectoItem`}>
 							<Image
-								src="/icons/notes/notes.png"
+								src="/desktop/icons/notes/notes.png"
 								alt="icon"
 								width={40}
 								height={40}
@@ -68,7 +68,7 @@ function Icons() {
 					<Link href={'/explorer/projects'} passHref>
 						<div className={`${styles.item} selectoItem`}>
 							<Image
-								src="/icons/folder/folder.png"
+								src="/desktop/icons/folder/folder.png"
 								alt="icon"
 								width={40}
 								height={40}
@@ -79,7 +79,7 @@ function Icons() {
 					<Link href={'/explorer/tools'} passHref>
 						<div className={`${styles.item} selectoItem`}>
 							<Image
-								src="/icons/folder/folder.png"
+								src="/desktop/icons/folder/folder.png"
 								alt="icon"
 								width={40}
 								height={40}
@@ -90,7 +90,7 @@ function Icons() {
 					<Link href={'/explorer/podcasts'} passHref>
 						<div className={`${styles.item} selectoItem`}>
 							<Image
-								src="/icons/folder/folder.png"
+								src="/desktop/icons/folder/folder.png"
 								alt="icon"
 								width={40}
 								height={40}
@@ -101,7 +101,7 @@ function Icons() {
 					<Link href={'/explorer/links'} passHref>
 						<div className={`${styles.item} selectoItem`}>
 							<Image
-								src="/icons/links/links.png"
+								src="/desktop/icons/links/links.png"
 								alt="icon"
 								width={40}
 								height={40}
@@ -112,7 +112,7 @@ function Icons() {
 					<Link href={'/explorer/pictures'} passHref>
 						<div className={`${styles.item} selectoItem`}>
 							<Image
-								src="/icons/pictures/pictures.png"
+								src="/desktop/icons/pictures/pictures.png"
 								alt="icon"
 								width={40}
 								height={40}
@@ -123,7 +123,7 @@ function Icons() {
 					<Link href={'/explorer/videos'} passHref>
 						<div className={`${styles.item} selectoItem`}>
 							<Image
-								src="/icons/videos/videos.png"
+								src="/desktop/icons/videos/videos.png"
 								alt="icon"
 								width={40}
 								height={40}
@@ -136,14 +136,14 @@ function Icons() {
 					{/* <div className={`${styles.item} selectoItem recycleBin`}>
 						{deleted ? (
 							<Image
-								src="/icons/trash/trash_full.png"
+								src="/desktop/icons/trash/trash_full.png"
 								alt="icon"
 								width={40}
 								height={40}
 							></Image>
 						) : (
 							<Image
-								src="/icons/trash/trash_empty.png"
+								src="/desktop/icons/trash/trash_empty.png"
 								alt="icon"
 								width={40}
 								height={40}

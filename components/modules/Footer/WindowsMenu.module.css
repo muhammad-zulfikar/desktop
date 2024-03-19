@@ -32,7 +32,7 @@
 	height: 100%;
 	border: 1px solid rgb(128 128 128 / 27.5%);
 	border-radius: 15px;
-	background-image: url('/images/darknoice.png');
+	background-image: url('/desktop/images/darknoice.png');
 }
 
 .winMenuSearch input[type='text'] {

@@ -60,6 +60,6 @@
 .background {
 	height: calc(100% - 32px);
 	border-radius: 0 0 10px 10px;
-	background-image: url('/images/darknoice.png');
+	background-image: url('/desktop/images/darknoice.png');
 	opacity: 0.9;
 }

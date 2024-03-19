@@ -112,7 +112,7 @@ function Terminal() {
 			topTitle={'Command Prompt - Administrator'}
 			topIcon={
 				<Image
-					src={`/icons/terminal/terminal.png`}
+					src={`/desktop/icons/terminal/terminal.png`}
 					alt="ico"
 					width={20}
 					height={20}

@@ -90,7 +90,7 @@ function WindowsMenu({ winMenu, handleWinMenu }: Props) {
 								<Link href="/explorer/quick-access" passHref>
 									<div onClick={() => handleWinMenu()}>
 										<Image
-											src="/icons/explorer/explorer.png"
+											src="/desktop/icons/explorer/explorer.png"
 											alt="img"
 											width={30}
 											height={30}
@@ -101,7 +101,7 @@ function WindowsMenu({ winMenu, handleWinMenu }: Props) {
 								<Link href="/explorer/pictures" passHref>
 									<div onClick={() => handleWinMenu()}>
 										<Image
-											src="/icons/pictures/pictures.png"
+											src="/desktop/icons/pictures/pictures.png"
 											alt="img"
 											width={30}
 											height={30}
@@ -112,7 +112,7 @@ function WindowsMenu({ winMenu, handleWinMenu }: Props) {
 								<Link href="/explorer/videos" passHref>
 									<div onClick={() => handleWinMenu()}>
 										<Image
-											src="/icons/videos/videos.png"
+											src="/desktop/icons/videos/videos.png"
 											alt="img"
 											width={30}
 											height={30}
@@ -138,7 +138,7 @@ function WindowsMenu({ winMenu, handleWinMenu }: Props) {
 									>
 										<div onClick={() => handleWinMenu()}>
 											<Image
-												src="/icons/explorer/explorer.png"
+												src="/desktop/icons/explorer/explorer.png"
 												alt="img"
 												width={30}
 												height={30}
@@ -149,7 +149,7 @@ function WindowsMenu({ winMenu, handleWinMenu }: Props) {
 									<Link href="/explorer/pictures" passHref>
 										<div onClick={() => handleWinMenu()}>
 											<Image
-												src="/icons/pictures/pictures.png"
+												src="/desktop/icons/pictures/pictures.png"
 												alt="img"
 												width={30}
 												height={30}
@@ -162,7 +162,7 @@ function WindowsMenu({ winMenu, handleWinMenu }: Props) {
 									<Link href="/explorer/videos" passHref>
 										<div onClick={() => handleWinMenu()}>
 											<Image
-												src="/icons/videos/videos.png"
+												src="/desktop/icons/videos/videos.png"
 												alt="img"
 												width={30}
 												height={30}
@@ -172,7 +172,7 @@ function WindowsMenu({ winMenu, handleWinMenu }: Props) {
 									</Link>
 									<div>
 										<Image
-											src="/icons/firefox/firefox.png"
+											src="/desktop/icons/firefox/firefox.png"
 											alt="img"
 											width={30}
 											height={30}
@@ -187,7 +187,7 @@ function WindowsMenu({ winMenu, handleWinMenu }: Props) {
 				<div className={styles.winMenuFooter}>
 					<div>
 						<Image
-							src="/images/windowsUser.webp"
+							src="/desktop/images/windowsUser.webp"
 							alt=""
 							width={30}
 							height={30}

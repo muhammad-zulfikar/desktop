@@ -49,7 +49,7 @@ function Bluescreen({ errorCode }: Props) {
 					<div className={styles.aboutIssue}>
 						<div>
 							<Image
-								src="/images/windowsErrorQR.svg"
+								src="/desktop/images/windowsErrorQR.svg"
 								alt="svg"
 								width={140}
 								height={140}

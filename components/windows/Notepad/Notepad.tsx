@@ -15,7 +15,7 @@ function Notepad({ initialText }: { initialText: string }) {
 			topTitle="Notepad"
 			topIcon={
 				<Image
-					src={`/icons/notepad/notepad.png`}
+					src={`/desktop/icons/notepad/notepad.png`}
 					alt="ico"
 					width={20}
 					height={20}
