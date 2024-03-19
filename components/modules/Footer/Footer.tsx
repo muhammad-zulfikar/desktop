@@ -66,7 +66,7 @@ function Footer() {
 						onClick={() => handleWinMenu()}
 					>
 						<Image
-							src={'/icons/windows/windows.png'}
+							src={'/desktop/icons/windows/windows.png'}
 							width={25}
 							height={25}
 							alt="logo"
@@ -76,7 +76,7 @@ function Footer() {
 					<Link href="/terminal" passHref>
 						<div className={styles.icon}>
 							<Image
-								src={'/icons/terminal/terminal.png'}
+								src={'/desktop/icons/terminal/terminal.png'}
 								width={25}
 								height={25}
 								alt="logo"
@@ -86,7 +86,7 @@ function Footer() {
 					<Link href="/explorer/quick-access" passHref>
 						<div className={styles.icon}>
 							<Image
-								src={'/icons/explorer/explorer.png'}
+								src={'/desktop/icons/explorer/explorer.png'}
 								width={25}
 								height={25}
 								alt="logo"
@@ -98,7 +98,7 @@ function Footer() {
 						onClick={() => handleError('Chrome')}
 					>
 						<Image
-							src={'/icons/chrome/chrome.png'}
+							src={'/desktop/icons/chrome/chrome.png'}
 							width={30}
 							height={30}
 							alt="logo"
@@ -111,7 +111,7 @@ function Footer() {
 						}
 					>
 						<Image
-							src={'/icons/vscode/vscode.png'}
+							src={'/desktop/icons/vscode/vscode.png'}
 							width={25}
 							height={25}
 							alt="logo"
@@ -122,7 +122,7 @@ function Footer() {
 						onClick={() => handleError('Spotify')}
 					>
 						<Image
-							src={'/icons/spotify/spotify.png'}
+							src={'/desktop/icons/spotify/spotify.png'}
 							width={27}
 							height={27}
 							alt="logo"

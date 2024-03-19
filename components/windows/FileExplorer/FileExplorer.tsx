@@ -125,7 +125,7 @@ function FileExplorer(props: Props) {
 							<div className={styles.manageDropdown}>
 								<div>
 									<Image
-										src="/icons/folder/folder.png"
+										src="/desktop/icons/folder/folder.png"
 										height={20}
 										width={20}
 										alt="ico"
@@ -134,7 +134,7 @@ function FileExplorer(props: Props) {
 								</div>
 								<div>
 									<Image
-										src="/icons/shortcut/shortcut.png"
+										src="/desktop/icons/shortcut/shortcut.png"
 										height={20}
 										width={20}
 										alt="ico"
@@ -143,7 +143,7 @@ function FileExplorer(props: Props) {
 								</div>
 								<div>
 									<Image
-										src="/icons/notes/notes.png"
+										src="/desktop/icons/notes/notes.png"
 										height={20}
 										width={20}
 										alt="ico"
@@ -367,7 +367,7 @@ function FileExplorer(props: Props) {
 						<Link href="/explorer/quick-access" passHref>
 							<div>
 								<Image
-									src="/icons/quickaccess/quickaccess.png"
+									src="/desktop/icons/quickaccess/quickaccess.png"
 									alt="ico"
 									width={16}
 									height={16}
@@ -391,7 +391,7 @@ function FileExplorer(props: Props) {
 									}
 								>
 									<Image
-										src="/icons/desktop/desktop.png"
+										src="/desktop/icons/desktop/desktop.png"
 										alt="ico"
 										width={16}
 										height={16}
@@ -412,7 +412,7 @@ function FileExplorer(props: Props) {
 									}
 								>
 									<Image
-										src="/icons/downloads/downloads_small.png"
+										src="/desktop/icons/downloads/downloads_small.png"
 										alt="ico"
 										width={16}
 										height={16}
@@ -434,7 +434,7 @@ function FileExplorer(props: Props) {
 									}
 								>
 									<Image
-										src="/icons/documents/documents_small.png"
+										src="/desktop/icons/documents/documents_small.png"
 										alt="ico"
 										width={16}
 										height={16}
@@ -455,7 +455,7 @@ function FileExplorer(props: Props) {
 									}
 								>
 									<Image
-										src="/icons/pictures/pictures_small.png"
+										src="/desktop/icons/pictures/pictures_small.png"
 										alt="ico"
 										width={16}
 										height={16}
@@ -475,7 +475,7 @@ function FileExplorer(props: Props) {
 									}
 								>
 									<Image
-										src="/icons/music/music_small.png"
+										src="/desktop/icons/music/music_small.png"
 										alt="ico"
 										width={16}
 										height={16}
@@ -495,7 +495,7 @@ function FileExplorer(props: Props) {
 									}
 								>
 									<Image
-										src="/icons/videos/videos_small.png"
+										src="/desktop/icons/videos/videos_small.png"
 										alt="ico"
 										width={16}
 										height={16}
@@ -528,7 +528,7 @@ function FileExplorer(props: Props) {
 						<Link href="/explorer/this-pc" passHref>
 							<div>
 								<Image
-									src="/icons/this-pc/this-pc.png"
+									src="/desktop/icons/this-pc/this-pc.png"
 									alt="ico"
 									width={16}
 									height={16}
@@ -551,7 +551,7 @@ function FileExplorer(props: Props) {
 									}
 								>
 									<Image
-										src="/icons/drives/c.png"
+										src="/desktop/icons/drives/c.png"
 										alt="ico"
 										width={16}
 										height={16}
@@ -572,7 +572,7 @@ function FileExplorer(props: Props) {
 									}
 								>
 									<Image
-										src="/icons/drives/d.png"
+										src="/desktop/icons/drives/d.png"
 										alt="ico"
 										width={16}
 										height={16}

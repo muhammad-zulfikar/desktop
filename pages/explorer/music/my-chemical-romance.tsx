@@ -21,7 +21,7 @@ function MyChemicalRomance() {
 							<div className={styles.listItem}>
 								<div className={styles.listItemName}>
 									<Image
-										src="/icons/folder/folder.png"
+										src="/desktop/icons/folder/folder.png"
 										alt="icon"
 										width={16}
 										height={16}

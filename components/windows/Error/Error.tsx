@@ -39,7 +39,7 @@ function Error({ errors, index, setError, error }: Props) {
 				<div className={styles.errorTop}>
 					<div>
 						<Image
-							src={'/icons/error/error.png'}
+							src={'/desktop/icons/error/error.png'}
 							width={20}
 							height={20}
 							alt="icon"
@@ -53,7 +53,7 @@ function Error({ errors, index, setError, error }: Props) {
 				<div className={styles.errorContent}>
 					<div>
 						<Image
-							src={'/icons/error/error.png'}
+							src={'/desktop/icons/error/error.png'}
 							width={40}
 							height={40}
 							alt="icon"

@@ -21,7 +21,7 @@ function ThisPC() {
 						<div className={styles.item}>
 							<div>
 								<Image
-									src="/icons/desktop/desktop.png"
+									src="/desktop/icons/desktop/desktop.png"
 									alt="icon"
 									width={50}
 									height={50}
@@ -38,7 +38,7 @@ function ThisPC() {
 						<div className={styles.item}>
 							<div>
 								<Image
-									src="/icons/downloads/downloads.png"
+									src="/desktop/icons/downloads/downloads.png"
 									alt="icon"
 									width={50}
 									height={50}
@@ -56,7 +56,7 @@ function ThisPC() {
 						<div className={styles.item}>
 							<div>
 								<Image
-									src="/icons/documents/documents.png"
+									src="/desktop/icons/documents/documents.png"
 									alt="icon"
 									width={50}
 									height={50}
@@ -74,7 +74,7 @@ function ThisPC() {
 						<div className={styles.item}>
 							<div>
 								<Image
-									src="/icons/pictures/pictures.png"
+									src="/desktop/icons/pictures/pictures.png"
 									alt="icon"
 									width={50}
 									height={50}
@@ -92,7 +92,7 @@ function ThisPC() {
 						<div className={styles.item}>
 							<div>
 								<Image
-									src="/icons/videos/videos.png"
+									src="/desktop/icons/videos/videos.png"
 									alt="icon"
 									width={50}
 									height={50}
@@ -110,7 +110,7 @@ function ThisPC() {
 						<div className={styles.item}>
 							<div>
 								<Image
-									src="/icons/music/music.png"
+									src="/desktop/icons/music/music.png"
 									alt="icon"
 									width={50}
 									height={50}
@@ -134,7 +134,7 @@ function ThisPC() {
 					<div className={`${styles.item} ${styles.disk}`}>
 						<div>
 							<Image
-								src="/icons/drives/c.png"
+								src="/desktop/icons/drives/c.png"
 								alt="icon"
 								width={50}
 								height={50}
@@ -149,7 +149,7 @@ function ThisPC() {
 					<div className={`${styles.item} ${styles.disk}`}>
 						<div>
 							<Image
-								src="/icons/drives/d.png"
+								src="/desktop/icons/drives/d.png"
 								alt="icon"
 								width={50}
 								height={50}

@@ -12,7 +12,7 @@ function Tools() {
 					<div className={styles.listItem}>
 						<div className={styles.listItemName}>
 							<Image
-								src="/icons/vscode/vscode.png"
+								src="/desktop/icons/vscode/vscode.png"
 								alt="icon"
 								width={16}
 								height={16}
@@ -28,7 +28,7 @@ function Tools() {
 					<div className={styles.listItem}>
 						<div className={styles.listItemName}>
 							<Image
-								src="/icons/githubdesktop/githubdesktop.png"
+								src="/desktop/icons/githubdesktop/githubdesktop.png"
 								alt="icon"
 								width={16}
 								height={16}
@@ -44,7 +44,7 @@ function Tools() {
 					<div className={styles.listItem}>
 						<div className={styles.listItemName}>
 							<Image
-								src="/icons/mongodbcompass/mongodbcompass.png"
+								src="/desktop/icons/mongodbcompass/mongodbcompass.png"
 								alt="icon"
 								width={16}
 								height={16}
@@ -60,7 +60,7 @@ function Tools() {
 					<div className={styles.listItem}>
 						<div className={styles.listItemName}>
 							<Image
-								src="/icons/postman/postman.png"
+								src="/desktop/icons/postman/postman.png"
 								alt="icon"
 								width={16}
 								height={16}
@@ -76,7 +76,7 @@ function Tools() {
 					<div className={styles.listItem}>
 						<div className={styles.listItemName}>
 							<Image
-								src="/icons/photoshop/photoshop.png"
+								src="/desktop/icons/photoshop/photoshop.png"
 								alt="icon"
 								width={16}
 								height={16}
@@ -92,7 +92,7 @@ function Tools() {
 					<div className={styles.listItem}>
 						<div className={styles.listItemName}>
 							<Image
-								src="/icons/illustrator/illustrator.png"
+								src="/desktop/icons/illustrator/illustrator.png"
 								alt="icon"
 								width={16}
 								height={16}

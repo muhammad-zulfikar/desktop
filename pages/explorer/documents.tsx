@@ -14,7 +14,7 @@ function Documents() {
 						<div className={styles.listItem}>
 							<div className={styles.listItemName}>
 								<Image
-									src="/icons/notes/notes.png"
+									src="/desktop/icons/notes/notes.png"
 									alt="icon"
 									width={16}
 									height={16}
@@ -32,7 +32,7 @@ function Documents() {
 						<div className={styles.listItem}>
 							<div className={styles.listItemName}>
 								<Image
-									src="/icons/folder/folder.png"
+									src="/desktop/icons/folder/folder.png"
 									alt="icon"
 									width={16}
 									height={16}
