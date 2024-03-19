@@ -8,7 +8,6 @@ module.exports = {
   assetPrefix: assetPrefix,
   basePath: basePath,
   images: {
-    domains: ...,
     path: `${basePath}/_next/image`,
   },
 };
