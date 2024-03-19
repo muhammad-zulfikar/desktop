@@ -1,7 +1,8 @@
 // next.config.js
 
-  assetPrefix = `/${repo}`
-  basePath = `/${repo}`
+const repo = 'desktop'
+assetPrefix = `/${repo}/`
+basePath = `/${repo}`
 
 module.exports = {
   assetPrefix: assetPrefix,
