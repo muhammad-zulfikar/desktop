@@ -69,17 +69,11 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 	return (
 		<ContextProvider>
-			{isBreakpoint ? (
-				<>
-					<Bluescreen errorCode="SCREEN_WIDTH_NOT_SUPPORTED" />
-				</>
-			) : (
 				<>
 					<Layout>
 						<Component {...pageProps} />
 					</Layout>
 				</>
-			)}
 		</ContextProvider>
 	);
 }

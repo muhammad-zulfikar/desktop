@@ -180,3 +180,37 @@
 .winMenuFooter img {
 	border-radius: 50%;
 }
+
+/* Media Query for Small Screens (e.g., mobile devices) */
+@media (max-width: 768px) {
+	.overflow {
+	  width: 80%; /* Adjust width for smaller screens */
+	  height: 60%; /* Adjust height for smaller screens */
+	  bottom: 8%; /* Position at the bottom of the screen */
+	}
+  
+	.winMenu {
+	  height: 100%; /* Adjust height for smaller screens */
+	}
+  
+	.winMenuContainer {
+	  padding: 15px; /* Increase padding for smaller screens */
+	}
+  
+	.winMenuSearch input[type='text'] {
+	  padding: 10px; /* Adjust input padding for smaller screens */
+	}
+  
+	.winMenuPinnedTop h2 {
+	  font-size: 0.7rem; /* Adjust heading font size */
+	}
+  
+	.winMenuRecommendedItem div {
+	  padding: 10px; /* Adjust padding for recommended items */
+	}
+  
+	.winMenuFooter {
+	  padding: 8px; /* Adjust padding for footer */
+	  font-size: 1rem; /* Adjust footer font size */
+	}
+  }
